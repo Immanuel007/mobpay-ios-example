@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (5.0.5)
+  - CocoaMQTT (2.1.6):
+    - CocoaMQTT/Core (= 2.1.6)
+  - CocoaMQTT/Core (2.1.6):
+    - MqttCocoaAsyncSocket (~> 1.0.8)
+  - CocoaMQTT/WebSockets (2.1.6):
+    - CocoaMQTT/Core
+    - Starscream (~> 3.1.1)
+  - CryptoSwift (1.8.4)
+  - Eureka (5.5.0)
+  - MobpayiOS (0.2.4):
+    - Alamofire (~> 5.0.5)
+    - CocoaMQTT (~> 2.1.0)
+    - CryptoSwift (~> 1.0)
+    - PercentEncoder (~> 1.2)
+    - SwiftyRSA (~> 1.5)
+  - MqttCocoaAsyncSocket (1.0.8)
+  - PercentEncoder (1.2.1)
+  - Starscream (3.1.1)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
+
+DEPENDENCIES:
+  - CocoaMQTT/WebSockets
+  - Eureka (~> 5.4)
+  - MobpayiOS (from `https://github.com/Immanuel007/mobpay-ios-lib.git`, branch `master`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CocoaMQTT
+    - CryptoSwift
+    - Eureka
+    - MqttCocoaAsyncSocket
+    - PercentEncoder
+    - Starscream
+    - SwiftyRSA
+
+EXTERNAL SOURCES:
+  MobpayiOS:
+    :branch: master
+    :git: https://github.com/Immanuel007/mobpay-ios-lib.git
+
+CHECKOUT OPTIONS:
+  MobpayiOS:
+    :commit: dc3fcc98a0552e37c9468cec3f82d6b9ab071461
+    :git: https://github.com/Immanuel007/mobpay-ios-lib.git
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  CocoaMQTT: 1f206228b29318eabdacad0c2e4e88575922c27a
+  CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
+  Eureka: 1c18c7fcd8f772cc2ca42d6be36292dffa77eecb
+  MobpayiOS: 99da7017ddf093518c3488126003bb09210e7461
+  MqttCocoaAsyncSocket: 77d3b74f76228dd5a05d1f9526eab101d415b30c
+  PercentEncoder: 40a4d727ebeda2a6ec77bf34fa620cc4b5845488
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+
+PODFILE CHECKSUM: 649f6a8c458b92ac710a32b112398066092f0cea
+
+COCOAPODS: 1.16.2
