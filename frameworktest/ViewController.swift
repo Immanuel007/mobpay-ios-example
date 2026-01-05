@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import MobpayiOS
 import Eureka
 import CryptoSwift
 import SafariServices
+import MobpayiOS
 
 class ViewController: FormViewController{
     //CLIENT VARIABLES
@@ -367,11 +367,22 @@ class ViewController: FormViewController{
                     let paymentInput = Payment(amount: String(self.paymentAmount), transactionRef: self.transactionRef, orderId: self.orderId, terminalType: self.terminalType, terminalId: self.termianalId, paymentItem: self.paymentItem, currency: self.currency, preauth: self.preauth, narration: self.narration)
                     let customerInput = Customer(customerId: self.customerId, firstName: self.firstName, secondName: self.secondName, email: self.emailAddress, mobile: self.mobileNumber, city: self.city, country: self.country, postalCode: self.postalCode, street: self.street, state: self.state)
                     let merchantInput = Merchant(merchantId: self.merchantId, domain: self.merchantDomain)
+                    let customization = Customization(
+                        redirectUrl: "",
+                        iconUrl: "",
+                        merchantName: "",
+                        providerIconUrl: "",
+                        redirectMerchantName: "",
+                        primaryAccentColor: "#0000FF",
+                        applyOffer: false,
+                        displayPrivacyPolicy: false
+                    )
                     
-                    var checkoutData: CheckoutData = CheckoutData(merchant: merchantInput, payment: paymentInput, customer: customerInput)
+                    
+                    var checkoutData: CheckoutData = CheckoutData(merchant: merchantInput, payment: paymentInput, customer: customerInput, customization: customization)
                     
                     Task{
-                        try! await Mobpay.instance.submitPayment(checkout: checkoutData, previousUIViewController: self){(completion) in
+                        try! await Mobpay.instance.submitPayment(checkout: checkoutData, isLive: false, previousUIViewController: self){(completion) in
                         self.showResponse(message: completion)
                     }
                     }
