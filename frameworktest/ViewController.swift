@@ -39,7 +39,7 @@ class ViewController: FormViewController{
     var termianalId:String = "3CRZ0001";
     var terminalType:String = "MOBILE";
     var paymentItem:String = "CRD";
-    var currency:String = "KES";
+    var currency:String = "USD";
     var preauth:String = "1";
     var narration:String = "Test iOS";
     //card variables
